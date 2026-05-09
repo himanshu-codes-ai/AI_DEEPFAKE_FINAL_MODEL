@@ -1067,13 +1067,17 @@ elif st.session_state.page == "Analysis Console":
         def render_logs():
             html_lines = []
             for entry in st.session_state.log_history:
+                ts   = entry['time']
+                msg  = entry['msg']
+                typ  = entry['type']
                 html_lines.append(
                     f"<div class='log-line'>"
-                    f"<span class='log-ts'>[{entry['time']}]</span>"
-                    f"<span class='log-{entry[\"type\"]}'>{entry['msg']}</span>"
+                    f"<span class='log-ts'>[{ts}]</span>"
+                    f"<span class='log-{typ}'>{msg}</span>"
                     f"</div>"
                 )
-            return f"<div class='terminal'>{''.join(html_lines)}</div>"
+            joined = "".join(html_lines)
+            return f"<div class='terminal'>{joined}</div>"
 
         def add_log(msg, type="msg"):
             t = time.strftime('%H:%M:%S')
