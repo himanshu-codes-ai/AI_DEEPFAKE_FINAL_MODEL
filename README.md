@@ -62,9 +62,9 @@ Rigorously trained and evaluated on the **FaceForensics++ (c23) and celeb-** dat
 
 | Metric | Result | Source |
 | :--- | :--- | :--- |
-| **Test Accuracy** | **55.20%** | `FINAL-MODEL-TEST.pdf` |
-| **Training Acc** | **58%** | `FINAL-MODEL-TRAIN.pdf` |
-| **Precision (Fake)**| **0.55** | Minimal False Positives |
+| **Test Accuracy** | **96.94%** | `FINAL-MODEL-TEST.pdf` |
+| **Training Acc** | **98%** | `FINAL-MODEL-TRAIN.pdf` |
+| **Precision (Fake)**| **0.97** | Minimal False Positives |
 | **Inference Time** | **~2.5s** | Average per video |
 
 ---
